@@ -1,0 +1,64 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  width: auto;
+  padding: 0 25px;
+  min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 55px;
+  color: $dark;
+}
+
+.button {
+  height: 75px;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  background-color: $accent;
+  color: $basic_white;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  padding: 30px 40px;
+  letter-spacing: 2px;
+}

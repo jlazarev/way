@@ -1,0 +1,57 @@
+.review {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 38px;
+}
+
+.review__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.691667px;
+  color: $dark;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 13px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 1px;
+    background-color: $accent;
+  }
+}
+
+.review__paragraph {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.408333px;
+  color: rgba($dark, 0.7);
+  margin-bottom: 41px;
+}
+
+.review__author {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.466667px;
+  position: relative;
+  color: $dark;
+  padding-left: 54px;
+}
+
+.countries__avatar {
+  position: absolute;
+  top: -10px;
+  left: 1px;
+  border-radius: 50%;
+}

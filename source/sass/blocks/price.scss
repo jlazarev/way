@@ -1,0 +1,70 @@
+.price {
+  background-color: transparent;
+  padding-bottom: 80px;
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.price__block {
+  width: 310px;
+  padding-left: 11px;
+  margin-right: -10px;
+  margin-left: auto;
+}
+
+.price__title {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  color: $dark;
+  margin-top: 112px;
+  padding-bottom: 17px;
+  position: relative;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: $accent;
+  }
+}
+
+.price__paragraph {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  color: rgba($dark, 0.7);
+  margin-bottom: 61px;
+}
+
+.price__contact span {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: $dark;
+  display: block;
+  padding-left: 46px;
+  margin-bottom: 12px;
+}
+
+.price__contact .price__phone {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  color: $basic_black;
+  position: relative;
+
+  & svg {
+    stroke: #fe7865;
+    position: absolute;
+    top: 0;
+    left: -4px;
+  }
+}

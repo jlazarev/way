@@ -1,0 +1,41 @@
+.promo {
+  background-color: $dark;
+  min-height: 860px;
+  color: $basic_white;
+  background-image: url("../img/meteora-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.promo__wrapper {
+  padding: 186px 100px 100px 715px;
+}
+
+.promo__title {
+  color: inherit;
+  margin: 0;
+  letter-spacing: -1.10667px;
+  line-height: 80px;
+  margin-bottom: 28px;
+}
+
+.promo__paragraph {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.466667px;
+  padding-left: 1px;
+  margin-bottom: 34px;
+}
+
+.promo__button {
+  padding-right: 178px;
+  position: relative;
+
+  & svg {
+    position: absolute;
+    top: 30px;
+    right: 39px;
+  }
+}

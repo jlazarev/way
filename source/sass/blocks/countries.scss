@@ -1,0 +1,91 @@
+.countries {
+  padding-bottom: 20px;
+  margin-bottom: 216px;
+}
+
+.countries__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  border-bottom: 1px solid rgba($dark, 0.3);
+  padding-bottom: 16px;
+  margin-bottom: 79px;
+}
+
+.countries__item {
+  margin-right: 100px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.countries__button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.415px;
+  color: rgba($dark, 0.3);
+  border: none;
+
+  &--active {
+    color: $accent;
+  }
+}
+
+.countries__block {
+  display: flex;
+  position: relative;
+}
+
+.countries__info {
+  width: 370px;
+  margin-right: 100px;
+}
+
+.countries__title {
+  letter-spacing: -1.245px;
+  position: relative;
+  padding-bottom: 29px;
+  margin-top: 21px;
+  margin-bottom: 31px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: $accent;
+  }
+}
+
+.countries__description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.466667px;
+  color: rgba($dark, 0.7);
+  margin-bottom: 49px;
+}
+
+.countries__buy-button {
+  border: 0;
+  display: block;
+  font-family: inherit;
+}
+
+.countries__review {
+  position: absolute;
+  top: 114px;
+  right: 0;
+  width: 382px;
+  background-color: $basic_white;
+}
