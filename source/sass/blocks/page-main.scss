@@ -4,4 +4,8 @@
   background-repeat: no-repeat;
   background-position: center 2587px;
   background-size: auto;
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
 }

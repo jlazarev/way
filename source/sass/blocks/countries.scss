@@ -1,6 +1,18 @@
 .countries {
   padding-bottom: 20px;
   margin-bottom: 216px;
+
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.countries__wrapper {
+  @media (max-width: $tablet-width) {
+    padding: 0px;
+  }
 }
 
 .countries__list {
@@ -11,13 +23,34 @@
   border-bottom: 1px solid rgba($dark, 0.3);
   padding-bottom: 16px;
   margin-bottom: 79px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 38px;
+    margin-bottom: 14px;
+    margin-right: 21px;
+    justify-content: space-between;
+  }
 }
 
 .countries__item {
   margin-right: 100px;
 
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
   &:last-child {
     margin-right: 0;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--montenegro {
+    @media (max-width: $tablet-width) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -42,11 +75,21 @@
 .countries__block {
   display: flex;
   position: relative;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
 }
 
 .countries__info {
   width: 370px;
   margin-right: 100px;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+    margin-right: 0;
+    text-align: center;
+  }
 }
 
 .countries__title {
@@ -56,6 +99,12 @@
   margin-top: 21px;
   margin-bottom: 31px;
 
+  @media (max-width: $tablet-width) {
+    letter-spacing: normal;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -64,6 +113,10 @@
     width: 175px;
     height: 3px;
     background-color: $accent;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -74,12 +127,29 @@
   letter-spacing: -0.466667px;
   color: rgba($dark, 0.7);
   margin-bottom: 49px;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 19px;
+  }
 }
 
 .countries__buy-button {
   border: 0;
-  display: block;
   font-family: inherit;
+
+  @media (max-width: $tablet-width) {
+    min-width: 250px;
+    margin-bottom: 30px;
+  }
+}
+
+.countries__picture {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .countries__review {
@@ -88,4 +158,11 @@
   right: 0;
   width: 382px;
   background-color: $basic_white;
+
+  @media (max-width: $tablet-width) {
+    top: auto;
+    bottom: -26px;
+    left: 0;
+    margin: 0 auto;
+  }
 }

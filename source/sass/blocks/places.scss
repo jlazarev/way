@@ -1,10 +1,28 @@
+.places {
+  display: none;
+}
+
 .places__wrapper {
   padding-top: 154px;
   margin-bottom: -1px;
+  max-width: 1320px;
+  padding-left: 75px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 37px;
+    padding-left: 51px;
+    margin-bottom: 90px;
+  }
 }
 
 .places__top {
   width: 358px;
+
+  @media (max-width: $tablet-width) {
+    width: 373px;
+    margin: 0 auto;
+    padding-right: 30px;
+  }
 }
 
 .places__title {
@@ -14,6 +32,12 @@
   padding-bottom: 33px;
   margin-bottom: 31px;
 
+  @media (max-width: $tablet-width) {
+    letter-spacing: normal;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -22,6 +46,10 @@
     width: 229px;
     height: 4px;
     background-color: $accent;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -32,6 +60,13 @@
   letter-spacing: -0.466667px;
   color: rgba($dark, 0.7);
   margin-bottom: 55px;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-top: 4px;
+    padding-top: 0;
+    margin-bottom: 39px;
+  }
 }
 
 .places__list {
@@ -46,20 +81,15 @@
 .places__item {
   position: relative;
   margin-right: 60px;
-  margin-bottom: 97px;
+  margin-bottom: 102px;
+  width: 350px;
+  height: 430px;
 
-  &:last-child {
-    margin-left: 60px;
-    margin-right: 0;
-  }
-
-  &:nth-child(3n) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  &:nth-child(3n + 1):last-child {
-    margin-left: 0;
+  @media (max-width: $tablet-width) {
+    width: 288px;
+    height: 425px;
+    margin-right: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -69,7 +99,7 @@
   right: 0;
   bottom: 0;
   width: 215px;
-  min-height: 65px;
+  min-height: 61px;
   background-color: $basic_white;
   margin: 0 auto;
   font-weight: 500;

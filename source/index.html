@@ -13,7 +13,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--close-menu">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo">
         <span class="visually-hidden">way</span>
@@ -21,6 +21,13 @@
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </a>
+
+      <div class="page-header__menu-button">
+        <span class="visually-hidden">Открыть меню</span>
+        <svg width="30" height="30">
+          <use xlink:href="img/sprite.svg#menu"></use>
+        </svg>
+      </div>
 
       <nav class="page-header__menu menu">
         <ul class="menu__main-nav-list">
@@ -51,19 +58,21 @@
 
     <section class="promo">
       <div class="promo__wrapper wrapper">
-        <h2 class="promo__title title">Путешествие по Европе</h2>
+        <div class="promo__block">
+          <h2 class="promo__title title">Путешествие по Европе</h2>
 
-        <p class="promo__paragraph">
-          В этом туре вы откроете для себя Европу в новом свете.
-          Вас ждет: море, горы, а также потрясающая красота природы.
-        </p>
+          <p class="promo__paragraph">
+            В этом туре вы откроете для себя Европу в новом свете.
+            Вас ждет: море, горы, а также потрясающая красота природы.
+          </p>
 
-        <a href="#" class="promo__button button">
-          смотреть тур
-          <svg width="16" height="16">
-            <use xlink:href="img/sprite.svg#arrow-down"></use>
-          </svg>
-        </a>
+          <a href="#" class="promo__button button">
+            смотреть тур
+            <svg width="16" height="16">
+              <use xlink:href="img/sprite.svg#arrow-down"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -83,8 +92,10 @@
             <h3 class="places__country">Греция</h3>
 
             <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet@1x.webp">
               <source type="image/webp" srcset="img/greece@1x.webp">
 
+              <source media="(max-width: 1023px)" srcset="img/greece-tablet@1x.jpg">
               <img class="places__picture" src="img/greece@1x.jpg" alt="Греция">
             </picture>
           </li>
@@ -92,8 +103,10 @@
             <h3 class="places__country">Албания</h3>
 
             <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet@1x.webp">
               <source type="image/webp" srcset="img/albania@1x.webp">
 
+              <source media="(max-width: 1023px)" srcset="img/albania-tablet@1x.jpg">
               <img class="places__picture" src="img/albania@1x.jpg" alt="Албания">
             </picture>
           </li>
@@ -101,8 +114,10 @@
             <h3 class="places__country">Македония</h3>
 
             <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet@1x.webp">
               <source type="image/webp" srcset="img/macedonia@1x.webp">
 
+              <source media="(max-width: 1023px)" srcset="img/macedonia-tablet@1x.jpg">
               <img class="places__picture" src="img/macedonia@1x.jpg" alt="Македония">
             </picture>
           </li>
@@ -110,8 +125,10 @@
             <h3 class="places__country">Черногория</h3>
 
             <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet@1x.webp">
               <source type="image/webp" srcset="img/montenegro@1x.webp">
 
+              <source media="(max-width: 1023px)" srcset="img/montenegro-tablet@1x.jpg">
               <img class="places__picture" src="img/montenegro@1x.jpg" alt="Черногория">
             </picture>
           </li>
@@ -119,8 +136,10 @@
             <h3 class="places__country">Хорватия</h3>
 
             <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet@1x.webp">
               <source type="image/webp" srcset="img/croatia@1x.webp">
 
+              <source media="(max-width: 1023px)" srcset="img/croatia-tablet@1x.jpg">
               <img class="places__picture" src="img/croatia@1x.jpg" alt="Хорватия">
             </picture>
           </li>
@@ -142,7 +161,7 @@
           <li class="countries__item">
             <button class="countries__button">Македония</button>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--montenegro">
             <button class="countries__button">Черногория</button>
           </li>
           <li class="countries__item">
@@ -169,8 +188,10 @@
           </div>
 
           <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet-info@1x.webp">
             <source type="image/webp" srcset="img/greece-info@1x.webp">
 
+            <source media="(max-width: 1023px)" srcset="img/greece-tablet-info@1x.jpg">
             <img class="countries__picture" src="img/greece-info@1x.jpg" alt="Греция">
           </picture>
 
@@ -426,7 +447,8 @@
             <svg width="26" height="20">
               <use xlink:href="img/sprite.svg#email"></use>
             </svg>
-            <span>puteshestviemechta@gmail.ru</span>
+            <span class="page-footer__email-long">puteshestviemechta@gmail.ru</span>
+            <span class="page-footer__email-short">Почта</span>
           </a>
 
           <a class="page-footer__phone" href="tel:849978468446">
