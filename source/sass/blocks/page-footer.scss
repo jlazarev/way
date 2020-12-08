@@ -1,5 +1,5 @@
 .page-footer {
-  display: none;
+  // display: none;
 }
 
 .page-footer__wrapper {
@@ -13,6 +13,11 @@
     padding-right: 21px;
     padding-left: 21px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 }
 
 .page-footer__title {
@@ -22,6 +27,11 @@
   color: $dark;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    padding-right: 10px;
+  }
 }
 
 .page-footer__directions {
@@ -34,6 +44,12 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 23px;
   }
+
+  @media (max-width: $mobile-width) {
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-bottom: 26px;
+  }
 }
 
 .page-footer__item {
@@ -42,6 +58,11 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 6px;
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    margin-bottom: 14px;
   }
 }
 
@@ -58,6 +79,13 @@
   max-width: 390px;
   border-right: 1px solid $light_grey;
 
+  @media (max-width: $mobile-width) {
+    border-right: none;
+    border-bottom: 1px solid $light_grey;
+    max-width: none;
+    width: 100%;
+  }
+
   &:nth-child(2) {
     padding-left: 88px;
     padding-right: 30px;
@@ -66,6 +94,11 @@
       border: none;
       padding-left: 55px;
       padding-right: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-left: 0;
+      padding-top: 29px;
     }
   }
 
@@ -81,8 +114,26 @@
       text-align: center;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 37px;
+    }
+
+    @media (max-width: $mobile-width) {
+      border-bottom: none;
       padding-top: 30px;
     }
+  }
+}
+
+.page-footer__block:last-child .page-footer__title {
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.page-footer__contacts {
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    padding-right: 11px;
   }
 }
 
@@ -97,6 +148,10 @@
   margin-bottom: 19px;
   position: relative;
 
+  @media (max-width: $mobile-width) {
+    display: inline-block;
+  }
+
   & svg {
     position: absolute;
     top: 0;
@@ -107,6 +162,10 @@
 
 .page-footer__email {
   margin-top: 22px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 3px;
+  }
 }
 
 .page-footer__email-long {
@@ -126,6 +185,10 @@
 .page-footer__phone {
   font-size: 16px;
   line-height: 32px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .page-footer__paragraph {

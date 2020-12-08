@@ -2,7 +2,7 @@
   padding-bottom: 20px;
   margin-bottom: 216px;
 
-  display: none;
+  // display: none;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
@@ -30,6 +30,11 @@
     margin-right: 21px;
     justify-content: space-between;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
 .countries__item {
@@ -47,9 +52,25 @@
     }
   }
 
+  &--albania {
+    @media (max-width: $mobile-width) {
+      margin-right: 0;
+    }
+  }
+
+  &--macedonia {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
   &--montenegro {
     @media (max-width: $tablet-width) {
       margin-right: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+      display: none;
     }
   }
 }
@@ -105,6 +126,10 @@
     margin-bottom: 20px;
   }
 
+  @media (max-width: $mobile-width) {
+    margin-top: 11px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -144,11 +169,25 @@
     min-width: 250px;
     margin-bottom: 30px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
+}
+.countries__box {
+  @media (max-width: $tablet-width) {
+    height: 415px;
+    overflow: hidden;
+  }
 }
 
 .countries__picture {
   @media (max-width: $tablet-width) {
     width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    // width: auto;
   }
 }
 
@@ -161,8 +200,13 @@
 
   @media (max-width: $tablet-width) {
     top: auto;
-    bottom: -26px;
+    bottom: -31px;
     left: 0;
     margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 268px;
+    bottom: -71px;
   }
 }

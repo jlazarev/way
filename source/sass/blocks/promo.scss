@@ -7,10 +7,17 @@
   background-position: center bottom;
   background-size: cover;
 
-  display: none;
+  // display: none;
 
   @media (max-width: $tablet-width) {
     min-height: 344px;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-position: center top;
+    height: 235px;
+    min-height: auto;
+    margin-bottom: 201px;
   }
 }
 
@@ -19,6 +26,10 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 60px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 82px;
   }
 }
 
@@ -31,6 +42,10 @@
     margin: 0 auto;
     width: 398px;
     text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: auto;
   }
 }
 
@@ -46,6 +61,13 @@
     letter-spacing: normal;
     margin-bottom: 18px;
   }
+
+  @media (max-width: $mobile-width) {
+    line-height: 36px;
+    padding-left: 5px;
+    margin-bottom: 101px;
+    min-height: 72px;
+  }
 }
 
 .promo__paragraph {
@@ -60,6 +82,11 @@
     text-align: center;
     margin-bottom: 9px;
   }
+
+  @media (max-width: $mobile-width) {
+    color: $basic_black;
+    margin-bottom: 20px;
+  }
 }
 
 .promo__button {
@@ -68,6 +95,11 @@
 
   @media (max-width: $tablet-width) {
     padding-right: 105px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 39px;
+    padding-right: 144px;
   }
 
   & svg {

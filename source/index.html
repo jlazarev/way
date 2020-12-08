@@ -155,10 +155,10 @@
           <li class="countries__item">
             <button class="countries__button countries__button--active">Греция</button>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--albania">
             <button class="countries__button">Албания</button>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--macedonia">
             <button class="countries__button">Македония</button>
           </li>
           <li class="countries__item countries__item--montenegro">
@@ -187,13 +187,17 @@
             </button>
           </div>
 
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet-info@1x.webp">
-            <source type="image/webp" srcset="img/greece-info@1x.webp">
+          <div class="countries__box">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/greece-mobile-info@1x.webp">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet-info@1x.webp">
+              <source type="image/webp" srcset="img/greece-info@1x.webp">
 
-            <source media="(max-width: 1023px)" srcset="img/greece-tablet-info@1x.jpg">
-            <img class="countries__picture" src="img/greece-info@1x.jpg" alt="Греция">
-          </picture>
+              <source media="(max-width: 767px)" srcset="img/greece-mobile-info@1x.jpg">
+              <source media="(max-width: 1023px)" srcset="img/greece-tablet-info@1x.jpg">
+              <img class="countries__picture" src="img/greece-info@1x.jpg" alt="Греция">
+            </picture>
+          </div>
 
           <div class="countries__review review">
             <h4 class="review__title">Отзывы</h4>
