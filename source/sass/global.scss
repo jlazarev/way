@@ -74,6 +74,10 @@ html {
   padding: 30px 40px;
   letter-spacing: 2px;
 
+  &:hover {
+    background-color: $accent_hover;
+  }
+
   @media (max-width: $tablet-width) {
     height: 50px;
     font-weight: 500;
@@ -85,4 +89,40 @@ html {
   @media (max-width: $mobile-width) {
     padding: 19px 71px;
   }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 728px;
+  height: 443px;
+  background: $light;
+  z-index: 6;
+
+  @media (max-width: $mobile-width) {
+    width: auto;
+    height: 568px;
+    background-color: $basic_white;
+    margin: auto 0;
+  }
+}
+
+.popup--close {
+  display: none;
+}
+
+.close-btn {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24x;
+  height: 24px;
+  display: block;
+  padding: 0;
 }

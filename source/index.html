@@ -13,7 +13,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--close-menu">
+  <header class="page-header page-header--close-menu page-header--nojs">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo">
         <span class="visually-hidden">way</span>
@@ -22,23 +22,32 @@
         </svg>
       </a>
 
-      <div class="page-header__menu-button">
+      <button class="page-header__menu-button" type="button">
         <span class="visually-hidden">Открыть меню</span>
-        <svg width="30" height="30">
+        <svg class="page-header__open-btn" width="30" height="30">
           <use xlink:href="img/sprite.svg#menu"></use>
         </svg>
-      </div>
+        <svg class="page-header__close-btn" width="24" height="24">
+          <use xlink:href="img/sprite.svg#close-btn"></use>
+        </svg>
+      </button>
 
       <nav class="page-header__menu menu">
         <ul class="menu__main-nav-list">
           <li class="menu__item">
-            <a class="menu__link" href="#" data-hover="О путешествии">
+            <a class="menu__link" href="#places" data-hover="О путешествии">
               <span>О путешествии</span>
+              <svg width="8" height="12">
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#" data-hover="Цены">
+            <a class="menu__link" href="#price" data-hover="Цены">
               <span>Цены</span>
+              <svg width="8" height="12">
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -66,7 +75,7 @@
             Вас ждет: море, горы, а также потрясающая красота природы.
           </p>
 
-          <a href="#" class="promo__button button">
+          <a href="#countries" class="promo__button button">
             смотреть тур
             <svg width="16" height="16">
               <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -76,7 +85,7 @@
       </div>
     </section>
 
-    <section class="places">
+    <section class="places" id="places">
       <div class="places__wrapper wrapper">
         <div class="places__top">
           <h2 class="places__title title">Места посещения</h2>
@@ -89,65 +98,75 @@
 
         <ul class="places__list">
           <li class="places__item">
-            <h3 class="places__country">Греция</h3>
+            <a href="#greece" class="places__link">
+              <h3 class="places__country">Греция</h3>
 
-            <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet@1x.webp">
-              <source type="image/webp" srcset="img/greece@1x.webp">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet@1x.webp">
+                <source type="image/webp" srcset="img/greece@1x.webp">
 
-              <source media="(max-width: 1023px)" srcset="img/greece-tablet@1x.jpg">
-              <img class="places__picture" src="img/greece@1x.jpg" alt="Греция">
-            </picture>
+                <source media="(max-width: 1023px)" srcset="img/greece-tablet@1x.jpg">
+                <img class="places__picture" src="img/greece@1x.jpg" alt="Греция">
+              </picture>
+            </a>
           </li>
           <li class="places__item">
-            <h3 class="places__country">Албания</h3>
+            <a href="#albania" class="places__link">
+              <h3 class="places__country">Албания</h3>
 
-            <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet@1x.webp">
-              <source type="image/webp" srcset="img/albania@1x.webp">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet@1x.webp">
+                <source type="image/webp" srcset="img/albania@1x.webp">
 
-              <source media="(max-width: 1023px)" srcset="img/albania-tablet@1x.jpg">
-              <img class="places__picture" src="img/albania@1x.jpg" alt="Албания">
-            </picture>
+                <source media="(max-width: 1023px)" srcset="img/albania-tablet@1x.jpg">
+                <img class="places__picture" src="img/albania@1x.jpg" alt="Албания">
+              </picture>
+            </a>
           </li>
           <li class="places__item">
-            <h3 class="places__country">Македония</h3>
+            <a href="#macedonia" class="places__link">
+              <h3 class="places__country">Македония</h3>
 
-            <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet@1x.webp">
-              <source type="image/webp" srcset="img/macedonia@1x.webp">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet@1x.webp">
+                <source type="image/webp" srcset="img/macedonia@1x.webp">
 
-              <source media="(max-width: 1023px)" srcset="img/macedonia-tablet@1x.jpg">
-              <img class="places__picture" src="img/macedonia@1x.jpg" alt="Македония">
-            </picture>
+                <source media="(max-width: 1023px)" srcset="img/macedonia-tablet@1x.jpg">
+                <img class="places__picture" src="img/macedonia@1x.jpg" alt="Македония">
+              </picture>
+            </a>
           </li>
           <li class="places__item">
-            <h3 class="places__country">Черногория</h3>
+            <a href="#montenegro" class="places__link">
+              <h3 class="places__country">Черногория</h3>
 
-            <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet@1x.webp">
-              <source type="image/webp" srcset="img/montenegro@1x.webp">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet@1x.webp">
+                <source type="image/webp" srcset="img/montenegro@1x.webp">
 
-              <source media="(max-width: 1023px)" srcset="img/montenegro-tablet@1x.jpg">
-              <img class="places__picture" src="img/montenegro@1x.jpg" alt="Черногория">
-            </picture>
+                <source media="(max-width: 1023px)" srcset="img/montenegro-tablet@1x.jpg">
+                <img class="places__picture" src="img/montenegro@1x.jpg" alt="Черногория">
+              </picture>
+            </a>
           </li>
           <li class="places__item">
-            <h3 class="places__country">Хорватия</h3>
+            <a href="#croatia" class="places__link">
+              <h3 class="places__country">Хорватия</h3>
 
-            <picture>
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet@1x.webp">
-              <source type="image/webp" srcset="img/croatia@1x.webp">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet@1x.webp">
+                <source type="image/webp" srcset="img/croatia@1x.webp">
 
-              <source media="(max-width: 1023px)" srcset="img/croatia-tablet@1x.jpg">
-              <img class="places__picture" src="img/croatia@1x.jpg" alt="Хорватия">
-            </picture>
+                <source media="(max-width: 1023px)" srcset="img/croatia-tablet@1x.jpg">
+                <img class="places__picture" src="img/croatia@1x.jpg" alt="Хорватия">
+              </picture>
+            </a>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="countries">
+    <section class="countries" id="countries">
       <h2 class="visually-hidden">Страны</h2>
 
       <div class="countries__wrapper wrapper">
@@ -169,7 +188,7 @@
           </li>
         </ul>
 
-        <div class="countries__block">
+        <div class="countries__block countries__block--active" id="greece">
           <div class="countries__info">
             <h3 class="countries__title title">Греция</h3>
 
@@ -219,10 +238,203 @@
             </cite>
           </div>
         </div>
+
+        <div class="countries__block" id="albania">
+          <div class="countries__info">
+            <h3 class="countries__title title">Албания</h3>
+
+            <p class="countries__description">
+              В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой
+              и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный,
+              правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись,
+              можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
+            </p>
+
+            <button class="countries__buy-button button">
+              купить тур сейчас
+            </button>
+          </div>
+
+          <div class="countries__box">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/albania-mobile-info@1x.webp">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet-info@1x.webp">
+              <source type="image/webp" srcset="img/albania-info@1x.webp">
+
+              <source media="(max-width: 767px)" srcset="img/albania-mobile-info@1x.jpg">
+              <source media="(max-width: 1023px)" srcset="img/albania-tablet-info@1x.jpg">
+              <img class="countries__picture" src="img/albania-info@1x.jpg" alt="Албания">
+            </picture>
+          </div>
+
+          <div class="countries__review review">
+            <h4 class="review__title">Отзывы</h4>
+
+            <blockquote class="review__paragraph">
+              Замечательный курорт, обязательно стоит посетить.
+              В следующий раз возьму с собой сестру, чтобы
+              тоже смогла вкусить все красоты природы :)
+            </blockquote>
+
+            <cite class="review__author">
+              <picture>
+                <source type="image/webp" srcset="img/marina@1x.webp">
+
+                <img class="countries__avatar" src="img/marina@1x.jpg" alt="Маришка">
+              </picture>
+
+              <span>Маришка</span>
+            </cite>
+          </div>
+        </div>
+
+        <div class="countries__block" id="macedonia">
+          <div class="countries__info">
+            <h3 class="countries__title title">Македония</h3>
+
+            <p class="countries__description">
+              В Македонии нашей целью будет посетить Палаошник, который расположился
+              в удивительно красивой лесистой местности возле Охридского озера и Самуиловой
+              твердыни. А также мы заберемся на вершину горы Татичев Камен где
+              находится археологический памятник Кокино в длину около 100 метров.
+            </p>
+
+            <button class="countries__buy-button button">
+              купить тур сейчас
+            </button>
+          </div>
+
+          <div class="countries__box">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/macedonia-mobile-info@1x.webp">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet-info@1x.webp">
+              <source type="image/webp" srcset="img/macedonia-info@1x.webp">
+
+              <source media="(max-width: 767px)" srcset="img/macedonia-mobile-info@1x.jpg">
+              <source media="(max-width: 1023px)" srcset="img/macedonia-tablet-info@1x.jpg">
+              <img class="countries__picture" src="img/macedonia-info@1x.jpg" alt="Македония">
+            </picture>
+          </div>
+
+          <div class="countries__review review">
+            <h4 class="review__title">Отзывы</h4>
+
+            <blockquote class="review__paragraph">
+              Я бы сказал необычное старое здание. В архитектуре я не разбираюсь,
+              но подъем в гору был очень веселым так как люди оказались легкими и заводными.
+              Красота природы впечатлила, особенно после долгого пути в гору.
+            </blockquote>
+
+            <cite class="review__author">
+              <picture>
+                <source type="image/webp" srcset="img/michael@1x.webp">
+
+                <img class="countries__avatar" src="img/michael@1x.jpg" alt="Михаил Кузьмин">
+              </picture>
+
+              <span>Михаил Кузьмин</span>
+            </cite>
+          </div>
+        </div>
+
+        <div class="countries__block" id="montenegro">
+          <div class="countries__info">
+            <h3 class="countries__title title">Черногория</h3>
+
+            <p class="countries__description">
+              Черногория удивит нас самым большим в Европе каньоном реки Тара,
+              который в некоторых местах высотой берегов доходит до 1300 метров,
+              а шириной не превышает трех. При этом длина каньона составляет 80 км.
+            </p>
+
+            <button class="countries__buy-button button">
+              купить тур сейчас
+            </button>
+          </div>
+
+          <div class="countries__box">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/montenegro-mobile-info@1x.webp">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet-info@1x.webp">
+              <source type="image/webp" srcset="img/montenegro-info@1x.webp">
+
+              <source media="(max-width: 767px)" srcset="img/montenegro-mobile-info@1x.jpg">
+              <source media="(max-width: 1023px)" srcset="img/montenegro-tablet-info@1x.jpg">
+              <img class="countries__picture" src="img/montenegro-info@1x.jpg" alt="Черногория">
+            </picture>
+          </div>
+
+          <div class="countries__review review">
+            <h4 class="review__title">Отзывы</h4>
+
+            <blockquote class="review__paragraph">
+              Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую
+            </blockquote>
+
+            <cite class="review__author">
+              <picture>
+                <source type="image/webp" srcset="img/anastasia@1x.webp">
+
+                <img class="countries__avatar" src="img/anastasia@1x.jpg" alt="Анастасия Мей">
+              </picture>
+
+              <span>Анастасия Мей</span>
+            </cite>
+          </div>
+        </div>
+
+        <div class="countries__block" id="croatia">
+          <div class="countries__info">
+            <h3 class="countries__title title">Хорватия</h3>
+
+            <p class="countries__description">
+              В Хорватии мы посетим необычайную пещеру названную Бередине.
+              Ее подземный мир увлечет вас на 80-ти метровую глубину через 5
+              освещенных залов, украшенных удивительными нерукотворными
+              скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
+            </p>
+
+            <button class="countries__buy-button button">
+              купить тур сейчас
+            </button>
+          </div>
+
+          <div class="countries__box">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/croatia-mobile-info@1x.webp">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet-info@1x.webp">
+              <source type="image/webp" srcset="img/croatia-info@1x.webp">
+
+              <source media="(max-width: 767px)" srcset="img/croatia-mobile-info@1x.jpg">
+              <source media="(max-width: 1023px)" srcset="img/croatia-tablet-info@1x.jpg">
+              <img class="countries__picture" src="img/croatia-info@1x.jpg" alt="Хорватия">
+            </picture>
+          </div>
+
+          <div class="countries__review review">
+            <h4 class="review__title">Отзывы</h4>
+
+            <blockquote class="review__paragraph">
+              Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема!
+              А то, что все это формировалось тысячелетиями, мега необычно.
+              Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
+            </blockquote>
+
+            <cite class="review__author">
+              <picture>
+                <source type="image/webp" srcset="img/vladimir@1x.webp">
+
+                <img class="countries__avatar" src="img/vladimir@1x.jpg" alt="Владимир Мулицин">
+              </picture>
+
+              <span>Владимир Мулицин</span>
+            </cite>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
       <div class="price__wrapper wrapper">
         <div class="price__block">
           <h2 class="price__title title">Цены</h2>
@@ -345,7 +557,7 @@
             Оставьте свой номер или e-mail и мы свяжемся с Вами
           </p>
 
-          <form action="#" class="question__form">
+          <form action="https://echo.htmlacademy.ru" class="question__form">
             <input type="tel" class="question__phone" placeholder="+7  Введите 10 цифр номера">
 
             <input type="email" class="question__e-mail" placeholder="E-mail">
@@ -476,6 +688,40 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup popup-buy popup--close">
+    <h2 class="popup-buy__title">Купить тур</h2>
+
+    <form action="https://echo.htmlacademy.ru" class="popup-buy__form">
+      <input type="tel" class="popup-buy__input popup-buy__input--phone" placeholder="+7  Введите 10 цифр номера">
+
+      <input type="email" class="popup-buy__input popup-buy__input--email" placeholder="E-mail">
+
+      <button type="submit" class="popup-buy__button button">
+        отправить
+      </button>
+    </form>
+
+    <button class="close-btn" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
+      <svg width="22" height="22">
+        <use xlink:href="img/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="popup popup-success popup--close">
+    <span>Форма успешно отправлена, спасибо! :)</span>
+
+    <button class="close-btn" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
+      <svg width="22" height="22">
+        <use xlink:href="img/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+  </div>
+
+  <script src="js/main-menu.js"></script>
 </body>
 
 </html>
