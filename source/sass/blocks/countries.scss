@@ -6,13 +6,12 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
-
   }
 }
 
 .countries__wrapper {
   @media (max-width: $tablet-width) {
-    padding: 0px;
+    padding: 0;
   }
 }
 
@@ -179,6 +178,7 @@
     margin-bottom: 50px;
   }
 }
+
 .countries__box {
   @media (max-width: $tablet-width) {
     height: 415px;
