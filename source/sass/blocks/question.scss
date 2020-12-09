@@ -3,8 +3,6 @@
   padding-top: 56px;
   margin-bottom: 170px;
 
-  // display: none;
-
   @media (max-width: $tablet-width) {
     padding-left: 0;
     padding-top: 46px;
@@ -23,6 +21,10 @@
   background-position: left bottom;
   background-size: auto;
   padding: 71px 0 69px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/sunset-bg@2x.jpg");
+  }
 
   @media (max-width: $tablet-width) {
     padding-top: 70px;

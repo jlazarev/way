@@ -7,7 +7,9 @@
   background-position: center bottom;
   background-size: cover;
 
-  // display: none;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/meteora-bg@2x.jpg");
+  }
 
   @media (max-width: $tablet-width) {
     min-height: 344px;
