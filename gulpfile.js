@@ -23,11 +23,11 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(sync.stream());
 }
 
@@ -38,7 +38,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'docs'
     },
     cors: true,
     notify: false,
@@ -71,7 +71,7 @@ const copy = () => {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 }
 
 exports.copy = copy;
@@ -79,13 +79,13 @@ exports.copy = copy;
 // imagemin
 
 const images = () => {
-  return gulp.src("build/img/**/*.{jpg,png,svg}")
+  return gulp.src("docs/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.images = images;
@@ -93,9 +93,9 @@ exports.images = images;
 //webp
 
 const webpmin = () => {
-  return gulp.src("build/img/**/*.{png,jpg}")
+  return gulp.src("docs/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.webp = webpmin;
@@ -103,10 +103,10 @@ exports.webp = webpmin;
 // svgstore-social
 
 const spriteSoc = () => {
-  return gulp.src("build/img/**/social-*.svg")
+  return gulp.src("docs/img/**/social-*.svg")
     .pipe(svgstore())
     .pipe(rename("socials-sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.spriteSoc = spriteSoc;
@@ -114,10 +114,10 @@ exports.spriteSoc = spriteSoc;
 // svgstore-flags
 
 const spriteFlag = () => {
-  return gulp.src("build/img/**/flag-*.svg")
+  return gulp.src("docs/img/**/flag-*.svg")
     .pipe(svgstore())
     .pipe(rename("flags-sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.spriteFlag = spriteFlag;
@@ -125,10 +125,10 @@ exports.spriteFlag = spriteFlag;
 // svgstore-transports
 
 const spriteTr = () => {
-  return gulp.src("build/img/**/transport-*.svg")
+  return gulp.src("docs/img/**/transport-*.svg")
     .pipe(svgstore())
     .pipe(rename("transports-sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.spriteTr = spriteTr;
@@ -136,10 +136,10 @@ exports.spriteTr = spriteTr;
 // svgstore-contacts
 
 const spriteContacts = () => {
-  return gulp.src("build/img/**/contact-*.svg")
+  return gulp.src("docs/img/**/contact-*.svg")
     .pipe(svgstore())
     .pipe(rename("contacts-sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.spriteContacts = spriteContacts;
@@ -147,10 +147,10 @@ exports.spriteContacts = spriteContacts;
 // svgstore
 
 const sprite = () => {
-  return gulp.src("build/img/**/*.svg")
+  return gulp.src("docs/img/**/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 exports.sprite = sprite;
@@ -158,7 +158,7 @@ exports.sprite = sprite;
 //clean
 
 const clean = () => {
-  return del("build");
+  return del("docs");
 }
 
 exports.clean = clean;
@@ -167,14 +167,14 @@ exports.clean = clean;
 
 const html = () => {
   return gulp.src("source/**/*.html", {base: "source"})
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 }
 
 exports.html = html;
 
-//build
+//docs
 
-const build = (done) => gulp.series(
+const docs = (done) => gulp.series(
   "clean",
   "copy",
   "styles",
@@ -183,12 +183,12 @@ const build = (done) => gulp.series(
   "sprite",
   "html")(done);
 
-exports.build = build;
+exports.docs = docs;
 
 //start
 
 const start = (done) => gulp.series(
-  "build",
+  "docs",
   "server",)(done);
 
 exports.start = gulp.series(
